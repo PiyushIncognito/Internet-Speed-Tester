@@ -19,7 +19,10 @@
                 <div class="content hide">
                     24 <small>Mbps</small>
                 </div>
-                <button id="btnTest">CHECK</button>
+                <audio id="myAudio">
+                    <source src="robo4.mp3" type="audio/mpeg">
+                </audio>
+                <button id="btnTest" onclick="playAudio()">CHECK</button>
             </div>
         </div>
     </div>
@@ -29,10 +32,10 @@
     <footer>
         <div class="row">
             <span>Made with &#10084;&#65039; By Naruto | </span>
-             <span class="copyright">Copyright &copy; 2023</span>
-          </div>
+            <span class="copyright">Copyright &copy; 2023</span>
+        </div>
     </footer>
-    
+
 </body>
 
 <script>
@@ -40,6 +43,12 @@
     // document.addEventListener("DOMContentLoaded", () => {
     //     document.querySelector('button').click()
     // });
+
+    var x = document.getElementById("myAudio");
+
+    function playAudio() {
+        x.play();
+    }
 
     document.querySelector('button').addEventListener('click', (e) => {
         var imageLink = 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Tokyo_Sky_Tree_2012_%E2%85%A5.JPG',
